@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Platform, View, Text } from 'react-native';
+import { StyleSheet, Platform, View, Text, TouchableOpacity , Button} from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -77,7 +77,25 @@ export default MyTabs;
 
 const HomeStackScreen = ({ navigation }) => (
     <Stack.Navigator>
-        <Stack.Screen name="Main" component={HomeTab} options={HomeTab.navigationOptions} />
+        <Stack.Screen name="Main" component={HomeTab} options={{
+            title: '주소지',
+            headerLeft:()=>(
+                <Icon.Button name='notifications-outline' color='#000' size={26} backgroundColor='#fff'  onPress={() => {
+                    alert('You tapped the button!');
+                  }}/>
+            ),
+            headerRight:()=>(
+                <Icon.Button name='qr-code-outline' color='#000' size={26} backgroundColor='#fff'onPress={() => {
+                    alert('You tapped the button!');
+                  }}/>
+            ),
+            headerTitleStyle:{
+                textAlign: 'center'
+            },
+            headerStyle:{
+            elevation: 0, //안드로이드에서 밑애 그림자 지는거 없애는거
+            shadowOpacity:0 //아이폰''
+        }}} />
     </Stack.Navigator>
 );
 
