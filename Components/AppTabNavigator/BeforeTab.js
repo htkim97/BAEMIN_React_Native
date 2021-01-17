@@ -1,17 +1,40 @@
 import React, {Component} from 'react';
 import {View, Text ,StyleSheet} from 'react-native';
 
-import Header from '../../shared/BeforeHeader';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
+const Tab = createMaterialTopTabNavigator();
+
+import BeforeTab1 from './AppTopNavigationList/BeforeTab1';
+import BeforeTab2 from './AppTopNavigationList/BeforeTab2';
 
 export default class BeforeTab extends Component{
-    static navigationOptions = {
-        headerTitle: () =><Header />, 
-    }
+
     render(){
         return(
-            <View style={style.container}>
-                <Text>BeforeTab</Text>
-            </View>
+            <Tab.Navigator
+                initialRouteName="Feed"
+                tabBarOptions={{
+                    activeTintColor: '#000',
+                    indicatorStyle: {
+                        backgroundColor: '#000'
+                    },
+                    labelStyle: { fontSize: 12 },
+                    style: { backgroundColor: 'white' },
+                }}
+            >
+                <Tab.Screen
+                    name="1"
+                    component={BeforeTab1}
+                    options={{ tabBarLabel: '배달.포장/방문' }}
+                />
+                <Tab.Screen
+                    name="2"
+                    component={BeforeTab2}
+                    options={{ tabBarLabel: 'B마트' }}
+                />
+
+            </Tab.Navigator>
         )
     }
 }

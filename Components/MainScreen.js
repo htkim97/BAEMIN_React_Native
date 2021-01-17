@@ -102,23 +102,66 @@ const HomeStackScreen = ({ navigation }) => (
 const WhatStackScreen = ({ navigation }) => (
 
     <Stack.Navigator>
-        <Stack.Screen name="What" component={WhatTab} options={WhatTab.navigationOptions} />
+        <Stack.Screen name="What" component={WhatTab} options={{
+            title: '뭐먹지',
+            headerTitleStyle:{
+                textAlign: 'center',
+                color: '#fff'
+            },
+            headerStyle:{
+                elevation: 0,
+                shadowOpacity: 0,
+                backgroundColor: '#000'
+            }
+    }} />
     </Stack.Navigator>
 );
 
 const LikeStackScreen = ({ navigation }) => (
     <Stack.Navigator>
-        <Stack.Screen name="Like" component={LikeTab} options={LikeTab.navigationOptions} />
+        <Stack.Screen name="Like" component={LikeTab} options={{
+            title: '찜한가게',
+            headerTitleStyle:{
+                textAlign: 'center',
+            },           
+            headerStyle:{
+                elevation: 0,
+                shadowOpacity: 0,
+            }
+        }} />
     </Stack.Navigator>
 )
 
 const BeforeStackScreen = ({ navigation }) => (
     <Stack.Navigator>
-        <Stack.Screen name="Before" component={BeforeTab} options={BeforeTab.navigationOptions} />
+        <Stack.Screen name="Before" component={BeforeTab} options={{
+            title:'주문내역',
+            headerTitleStyle:{
+                textAlign: 'center',
+            },           
+            headerStyle:{
+                elevation: 0,
+                shadowOpacity: 0,
+            },               
+            headerLeft:()=>(
+                <Icon.Button name='notifications-outline' color='#fff' size={26} backgroundColor='#fff'  
+                  />
+            ),         
+            headerRight:()=>(
+                <Icon.Button name='refresh-outline' color='#000' size={26} backgroundColor='#fff'onPress={() => {
+                    alert('You tapped the button!');
+                  }}/>
+            ),
+        }} />
     </Stack.Navigator>
 )
 const ProfileStackScreen = ({ navigation }) => (
     <Stack.Navigator>
-        <Stack.Screen name="Profile" component={ProfileTab} options={ProfileTab.navigationOptions} />
+        <Stack.Screen name="Profile" component={ProfileTab} options={{
+            title:'My배민',
+            headerTitleStyle:{
+                textAlign: 'center',
+            },   
+        }} />
     </Stack.Navigator>
 )

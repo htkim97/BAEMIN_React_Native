@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import {View, Text ,StyleSheet} from 'react-native';
 
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-export default class WhatTab extends Component{
+const Tab = createMaterialTopTabNavigator();
+
+export default class LikeTab extends Component{
 
     render(){
         return(
             <View style={style.container}>
-                <Text>WhatTab</Text>
+                <Text>LikeTab3</Text>
             </View>
         )
     }
