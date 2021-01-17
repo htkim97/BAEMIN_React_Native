@@ -122,7 +122,7 @@ export default class LikeTab extends Component {
                         </View>
                     </TouchableOpacity>
                 </View>
-                <Swiper renderPagination={renderPagination} autoplay={true} autoplayTimeout={10} style={{ flex:1,height: 100 }}>
+                <Swiper renderPagination={renderPagination} autoplay={true} autoplayTimeout={10} style={{height: 100 }}>
                     <View
                         style={styles.slide}
 
