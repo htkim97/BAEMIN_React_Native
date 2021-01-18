@@ -19,7 +19,7 @@ function normalize(size) {
   
 
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import Category from './commponents/Explore/Category';
 const renderPagination = (index, total, context) => {
     return (
         <View style={styles.paginationStyle}>
@@ -35,7 +35,7 @@ export default class LikeTab extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ScrollView style={{ flex: 1 }}>
+                <ScrollView style={{ flex: 1 }}scrollEventThrottle={16}>
                     <Swiper renderPagination={renderPagination} autoplay={true} autoplayTimeout={10} style={{ height: 160 }}>
                         <View
                             style={styles.slide}
@@ -160,13 +160,44 @@ export default class LikeTab extends Component {
                     </View>
 
                     <View style={{ flex: 1, height: 200, backgroundColor: '#fff', marginBottom: 10 }}>
-                        <View style={{ flext: 1, flexDirection: 'row', width: '90%', height: 50, marginLeft: 'auto', marginRight: 'auto', marginTop: 10, alignItems: 'center' }}>
+                        <View style={{ flext: 1, flexDirection: 'row', width: '90%', height: 30, marginLeft: 'auto', marginRight: 'auto', marginTop: 10, alignItems: 'center' }}>
                             <Text style={{ fontSize: 20, marginRight: 10 }}>오늘의 할인</Text>
                             <Icon name="archive" size={30} color={'#000'} />
                             <TouchableOpacity style={{ position: 'absolute', right: 0 }}>
                                 <Text style={{ color: 'grey' }}>전체보기</Text>
                             </TouchableOpacity>
+
+                        </View>                            
+
+                        <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 5}}>
+                            <View style={{ height: 135, marginTop: 5, alignItems: 'center'}}>
+                                <ScrollView
+                                    horizontal={true}
+                                    showsHorizontalScrollIndicator={false}
+                                >
+                                    <Category imageUri={require('./img/1.jpg')}/>
+                                    <Category imageUri={require('./img/2.jpg')}/>
+                                    <Category imageUri={require('./img/3.jpg')}/>
+                                    <TouchableOpacity>
+                                        <View style={{ height: 130, width: 130, marginLeft: 10, marginRight: 10 ,borderRadius: 10,  backgroundColor: '#fff',
+                                            shadowColor: 'black', shadowOpacity: 0, shadowRadius: 5, shadowOffset:{
+                                                height: 5, width: 5,
+                                            },elevation: 4
+                                        }}>
+                                            <View style={{ flex: 2, padding: 15 }}>
+                                                <Text style={{fontWeight: 'bold' , fontSize: 15}}>
+                                                    더 많은{'\n'}
+                                                    할인혜택{'\n'}
+                                                    보기 
+                                                </Text>
+                                                <Icon name="ios-arrow-forward-outline" size={30} color={'#000'} style={{position: 'absolute', right: 15, bottom: 15}}/>
+                                            </View>
+                                        </View>
+                                    </TouchableOpacity>
+                                </ScrollView>
+                            </View>
                         </View>
+
                     </View>
 
                     <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', height: 50, backgroundColor: '#fff', marginBottom: 2 }}>
