@@ -12,6 +12,7 @@ function MyTabs() {
     return (
       <Tab.Navigator
         initialRouteName="Feed"
+        swipeEnabled={false}
         tabBarOptions={{
           activeTintColor: '#29BBB6',
           inactiveTintColor:'black',
