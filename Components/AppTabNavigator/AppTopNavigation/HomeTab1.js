@@ -30,6 +30,9 @@ const renderPagination = (index, total, context) => {
     )
 }
 
+const goSearchPage = ({navigation}) =>{
+    
+}
 
 export default class LikeTab extends Component {
     render() {
@@ -65,7 +68,7 @@ export default class LikeTab extends Component {
                         <TouchableOpacity style={{
                             width: '90%', height: 50, marginBottom: 10, marginTop: 10, marginRight: 'auto', marginLeft: 'auto'
                             , borderColor: '#000', borderWidth: 2, borderRadius: 7
-                        }}>
+                        }} onPress={()=>{this.props.navigation.navigate('Search')}}>
                             <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}>
                                 <Icon name="search" color={'#000'} size={20} />
                                 <Text style={{ marginLeft: 10 }}>먹고 싶은 메뉴, 가게 검색</Text>
@@ -73,7 +76,9 @@ export default class LikeTab extends Component {
                         </TouchableOpacity>
                         <View style={{ flex: 1, width: '90%', marginRight: 'auto', marginLeft: 'auto' }}>
                             <View style={{ flex: 1, flexDirection: 'row', height: 26 }}>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{this.props.navigation.navigate('Gift')}}
+                                >
                                     <Icon name="gift-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>선물하기</Text>
                                 </TouchableOpacity>
