@@ -11,6 +11,8 @@ import QrcodeScreen from './Components/QrcodeScreen';
 import Search from './Components/AppFoods/SearchScreen';
 import GiftScreen from './Components/AppFoods/GiftScreen';
 import GetOrMeetScreen from'./Components/AppFoods/GetOrMeetScreen';
+import OneManScreen from './Components/AppFoods/OneManScreen';
+import Korean from './Components/AppFoods/FoodScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +28,8 @@ function App(){
         <Stack.Screen name="Search" component={Search}/>
         <Stack.Screen name="Gift" component={GiftScreen}/>
         <Stack.Screen name="GetOrMeet" component={GetOrMeetScreen}/>
+        <Stack.Screen name="OneMan" component={OneManScreen}/>
+        <Stack.Screen name="Korean" component={Korean}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
