@@ -11,9 +11,12 @@ export default class LikeTab extends Component{
     render(){
         return(
             <ScrollView style={{marginTop: 10}}>
-                <View style={{backgroundColor: '#fff', height: 30, justifyContent: 'center', width: '90%', marginLeft: 'auto', marginRight:'auto'}}>
-                    <Text>총 1개</Text>
+                <View style={{backgroundColor: '#fff',height: 30,justifyContent: 'center',}}>
+                    <View style={{   width: '90%', marginLeft: 'auto', marginRight:'auto'}}>
+                        <Text>총 1개</Text>
+                    </View>
                 </View>
+
                 <View style={{backgroundColor: '#fff', height: 130,marginBottom: 2, paddingTop: 10}}>
                     <View style={{flex: 1, flexDirection: 'row', width: '90%', marginLeft: 'auto', marginRight: 'auto'}}>
                         <View style={{width: 100, height: 100, }}>

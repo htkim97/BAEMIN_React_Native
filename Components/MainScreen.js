@@ -12,6 +12,9 @@ import WhatTab from './AppTabNavigator/WhatTab';
 
 import  Icon  from 'react-native-vector-icons/Ionicons';
 
+import SearchScreen from './AppFoods/SearchScreen';
+
+
 const Stack = createStackNavigator();
 
 
@@ -81,12 +84,12 @@ const HomeStackScreen = ({ navigation }) => (
             title: '주소지',
             headerLeft:()=>(
                 <Icon.Button name='notifications-outline' color='#000' size={26} backgroundColor='#fff'  onPress={() => {
-                    alert('You tapped the button!');
+                    navigation.navigate('Alert')
                   }}/>
             ),
             headerRight:()=>(
                 <Icon.Button name='qr-code-outline' color='#000' size={26} backgroundColor='#fff'onPress={() => {
-                    alert('You tapped the button!');
+                    navigation.navigate('Qrcode')
                   }}/>
             ),
             headerTitleStyle:{
