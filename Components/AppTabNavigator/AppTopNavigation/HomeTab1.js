@@ -82,15 +82,21 @@ export default class LikeTab extends Component {
                                     <Icon name="gift-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>선물하기</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{this.props.navigation.navigate('GetOrMeet')}}
+                                >
                                     <Icon name="logo-dropbox" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>포장/방문</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{this.props.navigation.navigate('OneMan')}}
+                                >
                                     <Icon name="information-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>1인분</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{this.props.navigation.navigate('Korean')}}
+                                >
                                     <Icon name="ios-ellipse-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>한식</Text>
                                 </TouchableOpacity>

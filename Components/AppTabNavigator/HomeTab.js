@@ -9,7 +9,6 @@ import HomeTab1 from './AppTopNavigation/HomeTab1';
 import HomeTab2 from './AppTopNavigation/HomeTab2';
 //여기도 메인처럼 바꾸고 다시 시도해보기
 
-import Search from '../AppFoods/SearchScreen';
 
 const Stack = createStackNavigator();
 function MyTabs() {
@@ -17,6 +16,7 @@ function MyTabs() {
       <Tab.Navigator
         initialRouteName="Feed"
         swipeEnabled={false}
+        
         tabBarOptions={{
           activeTintColor: '#29BBB6',
           inactiveTintColor:'black',
