@@ -12,20 +12,21 @@ const Stack = createStackNavigator();
 import FoodListScreen from './TopTaps/FoodListScreen';
 
 
+
 function GetOrMeet(){
     return (
         <Tab.Navigator
         initialRouteName="korean"
         tabBarOptions={{
           activeTintColor: '#29BBB6',
-          inactiveTintColor:'black',
+          inactiveTintColor:'black',//선택 안된 탭
           scrollEnabled: true,
           tabStyle:{width: 105},
           indicatorStyle:{
-            backgroundColor: '#29BBB6'
+            backgroundColor: '#29BBB6'//선택 바
           },
           labelStyle: { fontSize: 12 },
-          style: { backgroundColor: 'white' },
+          style: { backgroundColor: 'white'},
         }}
       >        
       <Tab.Screen
