@@ -17,7 +17,7 @@ export default class BeforeTab1 extends Component {
                 <View style={{ flexDirection: 'column', height: 200, backgroundColor: '#fff', marginTop: 9 }}>
 
                     <View style={{ flexDirection: 'row', margin: 5 ,marginLeft: 10}}>
-                        <Icon name="pizza-outline" size={30} color={'#000'} style={{left:6}} />
+                        <Icon name="pizza-outline" size={30} color={'#000'} />
                         <Text style={{ marginLeft: 10, fontSize: 15, margin: 10, color: 'grey' }}>
                             20시간전
                 </Text>
@@ -120,7 +120,7 @@ export default class BeforeTab1 extends Component {
                 <View style={{ flexDirection: 'column', height: 200, backgroundColor: '#fff', marginTop: 9 }}>
 
 <View style={{ flexDirection: 'row', margin: 5 ,marginLeft: 10}}>
-    <Icon name="ios-logo-twitter" size={30} color={'#000'} marginLeft={30} style={{left:6}}/>
+    <Icon name="ios-logo-twitter" size={30} color={'#000'} marginLeft={30} />
     <Text style={{ marginLeft: 10, fontSize: 15, margin: 10, color: 'grey' }}>
         24시간전
 </Text>
