@@ -1,5 +1,6 @@
 import React, {useState}from 'react';
 import {View, Text ,StyleSheet} from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 
@@ -15,6 +16,7 @@ export default function FoodListScreen(){
 
         return(
             <View style={style.container}>
+
                 {people.map((item)=>{
                     return (
                         <View>
@@ -24,6 +26,7 @@ export default function FoodListScreen(){
                 })}
             </View>
         )
+
 
 }
 

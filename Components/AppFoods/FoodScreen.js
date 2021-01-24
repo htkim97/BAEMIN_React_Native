@@ -21,6 +21,7 @@ function GetOrMeet({ route, navigation }) {
 
   
 
+
   return (
     
     <Tab.Navigator
@@ -58,7 +59,7 @@ function GetOrMeet({ route, navigation }) {
         options={{
           tabBarLabel: '분식',
           headerTitle: firstScreen
-        }}
+                }}
         listeners={({navigation, route}) =>({
           tabPress: e =>{
             navigation.navigate('Korean', {firstScreen:'snack', name:'분식'})
