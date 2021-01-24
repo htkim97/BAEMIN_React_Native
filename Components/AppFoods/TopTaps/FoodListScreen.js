@@ -1,23 +1,38 @@
-import React, {Component} from 'react';
+import React, {useState}from 'react';
 import {View, Text ,StyleSheet} from 'react-native';
 
 
 
-export default class FoodListScreen extends Component{
+export default function FoodListScreen(){
 
-    render(){
+
+        const [people] = useState([
+            {name: 'a', key: 1},
+            {name: 'b', key: 2},
+            {name: 'c', key: 3},
+            {name: 'd', key: 4},
+        ])
+
         return(
             <View style={style.container}>
-                <Text>리스트 화면</Text>
+                {people.map((item)=>{
+                    return (
+                        <View>
+                            <Text>{item.name}</Text>
+                        </View>
+                    )
+                })}
             </View>
         )
-    }
+
 }
 
 const style = StyleSheet.create({
     container:{
         flex:1,
-        alignItems: 'center',
-        justifyContent: 'center'
+        paddingTop: 40,
+        backgroundColor: '#fff',
+        paddingHorizontal: 20
+
     }
 })
