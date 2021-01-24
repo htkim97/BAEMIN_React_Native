@@ -19,8 +19,6 @@ function GetOrMeet({ route, navigation }) {
   const { firstScreen } = route.params;
   console.log(route.params);
 
-  
-
 
   return (
     
@@ -46,10 +44,14 @@ function GetOrMeet({ route, navigation }) {
           tabBarLabel: '한식',
           headerTitle: firstScreen
         }}
+        
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'korean', name:'한식'})
-          }
+          },
+          
+          
+          
         })}
       />
       <Tab.Screen
@@ -61,7 +63,7 @@ function GetOrMeet({ route, navigation }) {
           headerTitle: firstScreen
                 }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'snack', name:'분식'})
           }
         })}
@@ -72,7 +74,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen7}
         options={{ tabBarLabel: '돈까스.회.일식' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'japan', name:'돈까스.회.일식'})
           }
         })}
@@ -82,7 +84,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen6}
         options={{ tabBarLabel: '치킨' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'chicken', name:'치킨'})
           }
         })}
@@ -92,7 +94,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen8}
         options={{ tabBarLabel: '피자' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'pizza', name:'피자'})
           }
         })}
@@ -102,7 +104,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen10}
         options={{ tabBarLabel: '아시안.양식' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'asea', name:'아시안.양식'})
           }
         })}
@@ -112,7 +114,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen13}
         options={{ tabBarLabel: '중식' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'china', name:'중식'})
           }
         })}
@@ -122,7 +124,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen9}
         options={{ tabBarLabel: '족발.보쌈' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'foot', name:'족발.보쌈'})
           }
         })}
@@ -132,7 +134,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen11}
         options={{ tabBarLabel: '야식' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'night', name:'야식'})
           }
         })}
@@ -142,7 +144,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen14}
         options={{ tabBarLabel: '찜.탕' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'soup', name:'찜.탕'})
           }
         })}
@@ -152,7 +154,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen12}
         options={{ tabBarLabel: '도시락' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'lunchbox', name:'도시락'})
           }
         })}
@@ -162,7 +164,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen2}
         options={{ tabBarLabel: '카페.디저트' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'cafe', name:'카페.디저트'})
           }
         })}
@@ -173,7 +175,7 @@ function GetOrMeet({ route, navigation }) {
         component={FoodListMenuScreen4}
         options={{ tabBarLabel: '패스트푸드' }}
         listeners={({navigation, route}) =>({
-          tabPress: e =>{
+          focus: e =>{
             navigation.navigate('Korean', {firstScreen:'fast', name:'패스트푸드'})
           }
         })}
