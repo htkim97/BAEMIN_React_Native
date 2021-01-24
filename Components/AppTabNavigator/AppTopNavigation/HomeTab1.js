@@ -271,7 +271,7 @@ function LikeTab({navigation}) {
                             </TouchableOpacity>
                         </View>
                         <View style={{flex:1, width: '90%', marginRight:'auto', marginLeft: 'auto'}}>
-                            <Text>(주)우아한 형재들</Text>
+                            <Text>(주)우아한 형제들</Text>
                         </View>
                         <Text style={{color:'grey', fontSize: normalize(10), marginBottom: 30, width: '90%', marginRight: 'auto', marginLeft: 'auto'}}>
                             배달의민족은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 배달의민족은 상품 . 거래 정보 및 거래에 책임을 지지 않습니다.
