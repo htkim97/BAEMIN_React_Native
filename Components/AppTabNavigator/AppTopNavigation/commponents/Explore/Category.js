@@ -3,13 +3,14 @@ import {
     View,
     Test,
     StyleSheet,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
 
 class Category extends Component{
     render(){
         return(
-            <View style={{ height: 130, width: 250, marginLeft: 10, marginRight: 10, borderWidth: 0.5,borderRadius: 10,  backgroundColor: '#fff',
+            <TouchableOpacity style={{ height: 130, width: 250, marginLeft: 10, marginRight: 10, borderWidth: 0.5,borderRadius: 10,  backgroundColor: '#fff',
             shadowColor: 'black', shadowOpacity: 0, shadowRadius: 5, shadowOffset:{
                 height: 5, width: 5,
             },elevation: 4
@@ -21,7 +22,7 @@ class Category extends Component{
                     }}
                     />
                 </View>
-            </View>
+            </TouchableOpacity>
         );
     }
 }

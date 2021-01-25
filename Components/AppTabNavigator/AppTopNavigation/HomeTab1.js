@@ -30,12 +30,7 @@ const renderPagination = (index, total, context) => {
     )
 }
 
-const goSearchPage = ({navigation}) =>{
-    
-}
-
-export default class LikeTab extends Component {
-    render() {
+function LikeTab({navigation}) {
         return (
             <View style={styles.container}>
                 <ScrollView style={{ flex: 1 }}scrollEventThrottle={16}>
@@ -68,7 +63,7 @@ export default class LikeTab extends Component {
                         <TouchableOpacity style={{
                             width: '90%', height: 50, marginBottom: 10, marginTop: 10, marginRight: 'auto', marginLeft: 'auto'
                             , borderColor: '#000', borderWidth: 2, borderRadius: 7
-                        }} onPress={()=>{this.props.navigation.navigate('Search')}}>
+                        }} onPress={()=>{navigation.navigate('Search')}}>
                             <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}>
                                 <Icon name="search" color={'#000'} size={20} />
                                 <Text style={{ marginLeft: 10 }}>먹고 싶은 메뉴, 가게 검색</Text>
@@ -77,80 +72,104 @@ export default class LikeTab extends Component {
                         <View style={{ flex: 1, width: '90%', marginRight: 'auto', marginLeft: 'auto' }}>
                             <View style={{ flex: 1, flexDirection: 'row', height: 26 }}>
                                 <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
-                                    onPress={()=>{this.props.navigation.navigate('Gift')}}
+                                    onPress={()=>{navigation.navigate('Gift')}}
                                 >
                                     <Icon name="gift-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>선물하기</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
-                                    onPress={()=>{this.props.navigation.navigate('GetOrMeet')}}
+                                    onPress={()=>{navigation.navigate('GetOrMeet')}}
                                 >
                                     <Icon name="logo-dropbox" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>포장/방문</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
-                                    onPress={()=>{this.props.navigation.navigate('OneMan')}}
+                                    onPress={()=>{navigation.navigate('OneMan')}}
                                 >
                                     <Icon name="information-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>1인분</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
-                                    onPress={()=>{this.props.navigation.navigate('Korean')}}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'korean', name: '한식'});}}
                                 >
                                     <Icon name="ios-ellipse-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>한식</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'snack', name: '분식'});}}
+                                >
                                     <Icon name="ios-egg-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>분식</Text>
                                 </TouchableOpacity>
                             </View>
                             <View style={{ flex: 1, flexDirection: 'row', height: 26 }}>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'cafe', name: '카페.디저트'});}}
+                                >
                                     <Icon name="ios-ice-cream-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>카페.디저트</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'japan', name: '돈까스.회.일식'});}}
+                                >
                                     <Icon name="ios-server" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>돈까스.회.일식</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'chicken', name: '치킨'});}}
+                                >
                                     <Icon name="ios-logo-twitter" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>치킨</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'pizza', name: '피자'});}}
+                                >
                                     <Icon name="pizza-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>피자</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'asea', name: '아시안.양식'});}}
+                                >
                                     <Icon name="ios-leaf" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>아시안.양식</Text>
                                 </TouchableOpacity>
                             </View>
                             <View style={{ flex: 1, flexDirection: 'row', height: 26 }}>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'china', name: '중국집'});}}
+                                >
                                     <Icon name="md-home-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>중국집</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'foot', name: '족발.보쌈'});}}
+                                >
                                     <Icon name="md-paw-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>족발.보쌈</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'night', name:'야식'});}}
+                                >
                                     <Icon name="md-beer-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>야식</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'soup', name: '찜.탕'});}}
+                                >
                                     <Icon name="md-sunny-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>찜.탕</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'lunchbox', name: '도시락'});}}
+                                >
                                     <Icon name="ios-file-tray-sharp" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>도시락</Text>
                                 </TouchableOpacity>
                             </View>
                             <View style={{ flex: 1, flexDirection: 'row', height: 26 }}>
-                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ width: '20%', justifyContent: 'center', alignItems: 'center' }}
+                                    onPress={()=>{navigation.navigate('Korean',{firstScreen:'fast', name: '패스트푸드'});}}
+                                >
                                     <Icon name="md-rocket-outline" size={30} color={'#000'} />
                                     <Text style={{ fontSize: normalize(10) }}>패스트푸드</Text>
                                 </TouchableOpacity>
@@ -252,7 +271,7 @@ export default class LikeTab extends Component {
                             </TouchableOpacity>
                         </View>
                         <View style={{flex:1, width: '90%', marginRight:'auto', marginLeft: 'auto'}}>
-                            <Text>(주)우아한 형재들</Text>
+                            <Text>(주)우아한 형제들</Text>
                         </View>
                         <Text style={{color:'grey', fontSize: normalize(10), marginBottom: 30, width: '90%', marginRight: 'auto', marginLeft: 'auto'}}>
                             배달의민족은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 배달의민족은 상품 . 거래 정보 및 거래에 책임을 지지 않습니다.
@@ -261,9 +280,9 @@ export default class LikeTab extends Component {
                 </ScrollView>
             </View>
         )
-    }
+    
 }
-
+export default LikeTab;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
