@@ -13,6 +13,9 @@ import GiftScreen from './Components/AppFoods/GiftScreen';
 import GetOrMeetScreen from './Components/AppFoods/GetOrMeetScreen';
 import OneManScreen from './Components/AppFoods/OneManScreen';
 import Korean from './Components/AppFoods/FoodScreen';
+import nickname from './Components/ProfileTaps/nickname'
+import level from './Components/ProfileTaps/level'
+import coupon from './Components/ProfileTaps/coupon'
 
 const Stack = createStackNavigator();
 
@@ -22,6 +25,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
         <Stack.Screen name="Home" component={MainScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Alert" component={AlertScreen} />
         <Stack.Screen name="Qrcode" component={QrcodeScreen} />
@@ -42,6 +46,9 @@ function App() {
             <View></View>
           )
         })} />
+        <Stack.Screen name="nickname" component={nickname}/>
+        <Stack.Screen name="level" component={level}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );
