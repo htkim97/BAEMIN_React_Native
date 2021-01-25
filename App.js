@@ -13,6 +13,9 @@ import GiftScreen from './Components/AppFoods/GiftScreen';
 import GetOrMeetScreen from'./Components/AppFoods/GetOrMeetScreen';
 import OneManScreen from './Components/AppFoods/OneManScreen';
 import Korean from './Components/AppFoods/FoodScreen';
+import nickname from './Components/ProfileTaps/nickname'
+import level from './Components/ProfileTaps/level'
+import coupon from './Components/ProfileTaps/coupon'
 
 const Stack = createStackNavigator();
 
@@ -30,6 +33,8 @@ function App(){
         <Stack.Screen name="GetOrMeet" component={GetOrMeetScreen}/>
         <Stack.Screen name="OneMan" component={OneManScreen}/>
         <Stack.Screen name="Korean" component={Korean}/>
+        <Stack.Screen name="nickname" component={nickname}/>
+        <Stack.Screen name="level" component={level}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
