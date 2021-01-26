@@ -1,41 +1,31 @@
-import React, {useState}from 'react';
-import {View, Text ,StyleSheet} from 'react-native';
+import React, { Component, useState } from 'react';
+import { FlatList, View, Text, StyleSheet } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
+import TOC from './TOC';
 
-export default function FoodListScreen(){
 
 
-        const [people] = useState([
-            {name: 'a', key: 1},
-            {name: 'b', key: 2},
-            {name: 'c', key: 3},
-            {name: 'd', key: 4},
-        ])
+class FoodListScreen extends Component {
 
-        return(
-            <View style={style.container}>
+    render() {
 
-                {people.map((item)=>{
-                    return (
-                        <View>
-                            <Text>{item.name}</Text>
-                        </View>
-                    )
-                })}
+        return (
+            <View style={styles.container}>
+                <TOC data={this.props.data}></TOC>
             </View>
         )
+    }
 
 
 }
 
-const style = StyleSheet.create({
-    container:{
-        flex:1,
-        paddingTop: 40,
-        backgroundColor: '#fff',
-        paddingHorizontal: 20
+export default FoodListScreen;
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingTop: 50,
     }
 })
