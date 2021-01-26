@@ -24,6 +24,7 @@ class GetOrMeet extends Component {
   render() {
     const {route} = this.props;
     const {firstScreen} = route.params;
+
     return (
 
       <Container>

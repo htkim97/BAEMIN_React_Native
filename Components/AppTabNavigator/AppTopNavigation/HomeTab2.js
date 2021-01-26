@@ -115,7 +115,7 @@ export default class LikeTab extends Component {
                     <TouchableOpacity style={{
                         width: '90%', height: 50, marginBottom: 10, marginTop: 10, marginRight: 'auto', marginLeft: 'auto'
                         , borderColor: '#000', borderWidth: 2, borderRadius: 7
-                    }}>
+                    }} onPress={()=>{navigation.navigate('Search')}}>
                         <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}>
                             <Icon name="search" color={'#000'} size={20} />
                             <Text style={{ marginLeft: 10 }}>먹고 싶은 메뉴, 가게 검색</Text>

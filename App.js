@@ -13,6 +13,7 @@ import GiftScreen from './Components/AppFoods/GiftScreen';
 import GetOrMeetScreen from './Components/AppFoods/GetOrMeetScreen';
 import OneManScreen from './Components/AppFoods/OneManScreen';
 import Korean from './Components/AppFoods/FoodScreen';
+import ListDetail from './Components/ListDetail';
 
 const Stack = createStackNavigator();
 
@@ -42,6 +43,8 @@ function App() {
             <View></View>
           )
         })} />
+
+        <Stack.Screen name="ListDetail" component={ListDetail}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
