@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -14,6 +14,8 @@ import GetOrMeetScreen from './Components/AppFoods/GetOrMeetScreen';
 import OneManScreen from './Components/AppFoods/OneManScreen';
 import Korean from './Components/AppFoods/FoodScreen';
 import ListDetail from './Components/ListDetail';
+
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Stack = createStackNavigator();
 
@@ -44,7 +46,17 @@ function App() {
           )
         })} />
 
-        <Stack.Screen name="ListDetail" component={ListDetail}/>
+        <Stack.Screen name="ListDetail" component={ListDetail} options={{headerTitle: false,
+          headerRight:()=>(
+            <TouchableOpacity>
+              <Icon name="search-outline" size={23} style={{marginRight: 12}}/>
+            </TouchableOpacity>
+          ),
+          headerStyle:{
+            elevation: 0,
+            shadowOpacity: 0
+          }
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

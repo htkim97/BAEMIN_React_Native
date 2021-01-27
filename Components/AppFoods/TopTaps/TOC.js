@@ -7,7 +7,7 @@ class TOC extends Component{
         var data = this.props.data;
         
         const {navigation} = this.props;
-        console.log("으아아아아아아"+navigation);
+
         return(
             <View>
                 <ScrollView>
@@ -22,7 +22,7 @@ class TOC extends Component{
                     renderItem={({item}) => 
                     
                     <TouchableOpacity style={{backgroundColor: '#fff', height: 130,marginBottom: 2, paddingTop: 10}}
-                        onPress={() => alert('tlqkf')}
+                        onPress={() => navigation.navigate('ListDetail', {data: {item}})}
                     >
                         <View style={{flex: 1, flexDirection: 'row', width: '90%', marginLeft: 'auto', marginRight: 'auto'}}>
                             <View style={{width: 100, height: 100, }}>

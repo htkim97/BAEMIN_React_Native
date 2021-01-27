@@ -22,7 +22,7 @@ class GetOrMeet extends Component {
 
 
   render() {
-    const {route} = this.props;
+    const {route, navigation} = this.props;
     const {firstScreen} = route.params;
 
     return (
@@ -267,34 +267,34 @@ const styles = StyleSheet.create({
 
 const FoodListMenuScreen2 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM2' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM2' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 const FoodListMenuScreen3 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM3' children={({ navigation }) => <FoodListScreen data={[{ key: '와' }, { key: '일기장' }, { key: '어우' }, { key: '찐' }, { key: '찐찐' }]}></FoodListScreen>} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM3' children={({ navigation }) => <FoodListScreen navigation={navigation} data={[{ key: '와' }, { key: '일기장' }, { key: '어우' }, { key: '찐' }, { key: '찐찐' }]}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 const FoodListMenuScreen4 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM4' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM4' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 const FoodListMenuScreen5 = ({ navigation }) => (
 
   <Stack.Navigator>
-    <Stack.Screen name='AllM5' children={({ navigation }) => <FoodListScreen data={[{ key: '현태' }, { key: '현' }, { key: '태' }, { key: '현현' }, { key: '태태' }]}></FoodListScreen>} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM5' children={({ navigation }) => <FoodListScreen navigation={navigation} data={[{ key: '현태' }, { key: '현' }, { key: '태' }, { key: '현현' }, { key: '태태' }]}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 const FoodListMenuScreen6 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 
 const FoodListMenuScreen7 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' children={({ navigation }) => <FoodListScreen data={[{ key: 1, point: 3.5, price: 1000 }, { key: 2, point: 3.5, price: 1000 }, { key: 3, point: 3.8, price: 10000 }, { key: 4, point: 3.5, price: 1000 }, { key: 5, point: 3.5, price: 1000 }
+    <Stack.Screen name='AllM6' children={({ navigation }) => <FoodListScreen navigation={navigation} data={[{ key: 1, point: 3.5, price: 1000 }, { key: 2, point: 3.5, price: 1000 }, { key: 3, point: 3.8, price: 10000 }, { key: 4, point: 3.5, price: 1000 }, { key: 5, point: 3.5, price: 1000 }
       , { key: 6, point: 3.5, price: 1000 }, { key: 7, point: 3.5, price: 1000 }, { key: 8, point: 3.5, price: 1000 }, { key: 9, point: 3.5, price: 1000 }, { key: 10, point: 3.2, price: 1000 },
     ]}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
@@ -303,41 +303,41 @@ const FoodListMenuScreen7 = ({ navigation }) => (
 
 const FoodListMenuScreen8 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 
 const FoodListMenuScreen9 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 
 const FoodListMenuScreen10 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 
 const FoodListMenuScreen11 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6'children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 
 const FoodListMenuScreen12 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 
 const FoodListMenuScreen13 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )
 const FoodListMenuScreen14 = ({ navigation }) => (
   <Stack.Navigator>
-    <Stack.Screen name='AllM6' component={FoodListScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='AllM6' children={({navigation})=><FoodListScreen navigation={navigation}></FoodListScreen>} options={{ headerShown: false }} />
   </Stack.Navigator>
 )

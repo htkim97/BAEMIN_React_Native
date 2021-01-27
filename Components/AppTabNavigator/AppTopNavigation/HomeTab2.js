@@ -33,7 +33,7 @@ function normalize(size) {
 export default class LikeTab extends Component {
 
     render() {
-
+        const {navigation} = this.props;
         return (
 
             <ScrollView style={{ flex: 1 }}>
