@@ -8,12 +8,12 @@ import TOC from './TOC';
 
 
 class FoodListScreen extends Component {
-
+    
     render() {
-
+        const {navigation} = this.props;
         return (
             <View style={styles.container}>
-                <TOC data={this.props.data}></TOC>
+                <TOC data={this.props.data} navigation={navigation}></TOC>
             </View>
         )
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -13,9 +13,15 @@ import GiftScreen from './Components/AppFoods/GiftScreen';
 import GetOrMeetScreen from './Components/AppFoods/GetOrMeetScreen';
 import OneManScreen from './Components/AppFoods/OneManScreen';
 import Korean from './Components/AppFoods/FoodScreen';
+
+import ListDetail from './Components/ListDetail';
+
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import nickname from './Components/ProfileTaps/nickname'
 import level from './Components/ProfileTaps/level'
 import coupon from './Components/ProfileTaps/coupon'
+
 
 const Stack = createStackNavigator();
 
@@ -46,6 +52,20 @@ function App() {
             <View></View>
           )
         })} />
+
+
+        <Stack.Screen name="ListDetail" component={ListDetail} options={{headerTitle: false,
+          headerRight:()=>(
+            <TouchableOpacity>
+              <Icon name="search-outline" size={23} style={{marginRight: 12}}/>
+            </TouchableOpacity>
+          ),
+          headerStyle:{
+            elevation: 0,
+            shadowOpacity: 0
+          }
+        }}/>
+
         <Stack.Screen name="nickname" component={nickname}/>
         <Stack.Screen name="level" component={level}/>
 

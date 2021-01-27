@@ -34,7 +34,7 @@ function MyTabs() {
         />
         <Tab.Screen
           name="Notifications"
-          component={HomeTab2}
+          component={Home2Screen}
           options={{ tabBarLabel: '방문/포장' }}
         />
       </Tab.Navigator>
@@ -48,5 +48,11 @@ export default MyTabs;
 const Home1Screen = ({navigation}) =>(
   <Stack.Navigator>
     <Stack.Screen name="Home" component={HomeTab1} options={{headerShown: false}}/>
+  </Stack.Navigator>
+)
+
+const Home2Screen = ({navigation}) =>(
+  <Stack.Navigator>
+    <Stack.Screen name="Home2" component={HomeTab2} options={{headerShown: false}}/>
   </Stack.Navigator>
 )
