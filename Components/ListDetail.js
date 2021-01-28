@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+const Tab = createMaterialTopTabNavigator();
+
+import test from './QrcodeScreen';
+
+const screenHeight = Dimensions.get('window').height;
+
+
+import Tab1 from './FoodDetailList/TabDetail1';
+import Tab2 from './FoodDetailList/TabDetail2';
+import Tab3 from './FoodDetailList/TabDetail3';
+
 export default class AlertScreen extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={
-            contents: [{id:1, title:' 마라탕', price: 12000},
-                {id:2, title: '두부국', price: 6000},
-                {id:3, title: '김치', price: 2000}]
+        this.state = {
+            contents: [{ id: '1', title: ' 마라탕', price: 12000 },
+            { id: '2', title: '두부국', price: 6000 },
+            { id: '3', title: '김치', price: 2000 }]
         }
     }
     render() {
@@ -18,8 +30,12 @@ export default class AlertScreen extends Component {
         const { data } = route.params;
         return (
             <View style={style.container}>
-                <ScrollView>
-                    <View style={{ flex: 1, height: 300, backgroundColor: '#fff' }}>
+                <ScrollView
+                    stickyHeaderIndices={[1]}
+                    ref={ref =>(this.scrollView = ref)}
+                    
+                >
+                    <View style={{ flex: 1, height: 300, backgroundColor: '#fff', marginBottom: 20 }}>
                         <View style={{
                             width: '90%', marginRight: 'auto', marginLeft: 'auto', height: 200, backgroundColor: '#fff'
                             , shadowColor: '#000', shadowOffset: {
@@ -68,14 +84,48 @@ export default class AlertScreen extends Component {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                        <View style={{width: '90%', marginRight: 'auto', marginLeft: 'auto', marginTop: 10}}>
-                            <Text>최소 주문금액</Text>
-                            <Text>결제방법</Text>
-                            <Text>배달시간</Text>
-                            <Text>배달팁</Text>
+                        <View style={{ width: '90%', marginRight: 'auto', marginLeft: 'auto', marginTop: 10 }}>
+                            <Text>최소 주문금액 </Text>
+                            <Text>결제방법 </Text>
+                            <Text>배달시간 </Text>
+                            <Text>배달팁 </Text>
                         </View>
 
                     </View>
+
+                    <Tab.Navigator>
+                        <Tab.Screen
+                            name="Menu"
+                            component={Tab1}
+                            options={{ tabBarLabel: '메뉴' }}
+                            listeners={()=>({
+                                tabPress: this.scrollView.scrollTo({
+                                    y:320
+                                })
+                            })}
+                        />
+                        <Tab.Screen
+                            name="Info"
+                            component={Tab2}
+                            options={{ tabBarLabel: '정보' }}
+                            listeners={()=>({
+                                tabPress: e =>{this.scrollView.scrollTo({
+                                    y:320
+                                })}
+                            })}
+                        />
+                        <Tab.Screen
+                            name="Review"
+                            component={Tab3}
+                            options={{ tabBarLabel: '리뷰' }}
+                            listeners={()=>({
+                                tabPress: this.scrollView.scrollTo({
+                                    y:320
+                                })
+                            })}
+                        />
+                    </Tab.Navigator>
+ 
                 </ScrollView>
             </View>
         )
