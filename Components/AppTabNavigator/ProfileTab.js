@@ -12,7 +12,7 @@ export default class ProfileTab extends Component{
     render(){
         return(
             <ScrollView>
-                <TouchableOpacity onPress={()=>{this.props.navigation.navigate('nickname')}}>
+                <TouchableOpacity onPress={()=>{this.props.navigation.navigate('login')}}>
                 
                <View style={{
                   height:95,  backgroundColor: '#fff',
@@ -24,19 +24,12 @@ export default class ProfileTab extends Component{
                    <View style={{}}>
                        
                        <Text style={{ fontWeight: 'bold', color:'grey',left:45 ,fontSize:20}}>
-                          귀한분,
+                          로그인해주세요
                                    </Text>
 
 
                    </View>
-                   <View style={{ }}>
-                       
-                       <Text style={{ fontWeight: 'bold',left:50 ,fontSize:20}}>
-                          홍길동
-                                   </Text>
-
-
-                   </View>
+                  
 
 <View style={{alignItems:'center',left:200}}>
 <Icon name="chevron-small-right" size={25} color={'black'}  />
@@ -90,12 +83,15 @@ export default class ProfileTab extends Component{
                             
                             
                             
-                            
-                            <TouchableOpacity>
+               
                
                <View style={{flexDirection: 'row'}}>
+
+
+
+                   <TouchableOpacity onPress={()=>{this.props.navigation.navigate('point')}}>
                    
-               <View style={{height:80,width:'33%',  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
+               <View style={{height:80,width:138,  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
                    
                    
                    <View>
@@ -114,8 +110,16 @@ export default class ProfileTab extends Component{
 
 
                </View>
+
+
+</TouchableOpacity>
+
+
+
+
+<TouchableOpacity onPress={()=>{this.props.navigation.navigate('coupon')}}>
               
-               <View style={{height:80,width:'34%',  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
+               <View style={{height:80,width:138,  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
                <View>
                    <Icon name="box" size={25} color={'orange'} style={{ marginTop:10}} />
                    </View>
@@ -133,9 +137,14 @@ export default class ProfileTab extends Component{
 
 
                </View>
+               </TouchableOpacity>
+
+
+
+
+               <TouchableOpacity onPress={()=>{this.props.navigation.navigate('giftBox')}}>
                
-               
-               <View style={{height:80,width:'33%',  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
+               <View style={{height:80,width:138,  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
                <View>
                    <Icon name="cake" size={25} color={'blue'} style={{ marginTop:10}} />
                    </View>
@@ -152,19 +161,24 @@ export default class ProfileTab extends Component{
 
 
                </View>
+
+</TouchableOpacity>
+
                
                </View>
-               </TouchableOpacity>
+              
 
                
                
                
                
                
-               <TouchableOpacity>
+              
                
                <View style={{flexDirection: 'row'}}>
-               <View style={{height:80,width:'33%',  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
+
+                   <TouchableOpacity onPress={()=>{this.props.navigation.navigate('keepStore')}}>
+               <View style={{height:80,width:138,  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
                <View>
                    <Icon name="heart" size={25} color={'red'} style={{ marginTop:10}} />
                    </View>
@@ -176,13 +190,16 @@ export default class ProfileTab extends Component{
 
 
                    </View>
-                   
-                   
+                 
 
 
                </View>
-              
-               <View style={{height:80,width:'34%',  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
+                </TouchableOpacity>
+
+
+                <TouchableOpacity onPress={()=>{this.props.navigation.navigate('orderList')}}>
+                   
+               <View style={{height:80,width:138,  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
                <View>
                    <Icon name="list" size={25} color={'#008000'} style={{ marginTop:10}} />
                    </View>
@@ -199,7 +216,12 @@ export default class ProfileTab extends Component{
 
 
                </View>
-               <View style={{height:80,width:'33%',  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
+               
+               </TouchableOpacity>
+               
+               
+               <TouchableOpacity onPress={()=>{this.props.navigation.navigate('review')}}>
+               <View style={{height:80,width:138,  backgroundColor: '#fff',borderColor: '#D3D3D3', borderWidth: 1,  alignItems:"center"}}>
                <View>
                    <Icon name="chat" size={25} color={'skyblue'} style={{ marginTop:10}} />
                    </View>
@@ -216,14 +238,16 @@ export default class ProfileTab extends Component{
 
 
                </View>
+</TouchableOpacity>
+               
                </View>
 
                
 
-               </TouchableOpacity>
+               
 
             
-               <TouchableOpacity>
+               <TouchableOpacity >
                
                <View style={{
                   height:60,  backgroundColor: '#fff',
@@ -234,7 +258,9 @@ export default class ProfileTab extends Component{
                        <Text style={{ fontWeight: 'bold', fontSize: 15 , left:40,top:8,color:'#008000'}}>
                           일회용품 덜 쓰기, 함께해요!
                                    </Text>
-
+ <View style={{alignItems:'center',left:180,top:-15}}>
+<Icon name="chevron-small-right" size={30} color={'black'}  />
+</View>
 
                    </View>
 
@@ -260,7 +286,7 @@ export default class ProfileTab extends Component{
                    </View>
 
                    <View style={{alignItems:'center',left:180}}>
-<Icon name="chevron-small-right" size={25} color={'black'}  />
+<Icon name="chevron-small-right" size={30} color={'black'}  />
 </View>
 
                    <View style={{ flex: 2,margin:10}}>
@@ -283,12 +309,12 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
-                   <View style={{ flex: 2, padding: 10,top:10,flexDirection:'row',marginLeft:-25 }}>
+                   <View style={{ flex: 2, padding: 10,top:10,flexDirection:'row',marginLeft:-30 }}>
                    
-                   <View style={{alignItems:'center',left:385}}>
-<Icon name="chevron-small-right" size={25} color={'black'}  />
+                   <View style={{alignItems:'center',left:389}}>
+<Icon name="chevron-small-right" size={30} color={'black'}  />
 </View>
 
                    <Icon name="new" size={20} color={'#FF1694'} style={{ position: 'absolute', left:130,top:10}} />
@@ -311,7 +337,7 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
                    <View style={{ flex: 2, padding: 10,top:10 }}>
                        
@@ -332,7 +358,7 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
                    <View style={{ flex: 2, padding: 10,top:10 }}>
                        
@@ -353,7 +379,7 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
                    <View style={{ flex: 2, padding: 10,top:10 }}>
                        
@@ -375,7 +401,7 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
                    <View style={{ flex: 2, padding: 10,top:10 }}>
                        
@@ -396,7 +422,7 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
                    <View style={{ flex: 2, padding: 10,top:10 }}>
                        
@@ -417,7 +443,7 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
                    <View style={{ flex: 2, padding: 10,top:10 }}>
                        
@@ -438,7 +464,7 @@ export default class ProfileTab extends Component{
                
                <View style={{
                   height:65,  backgroundColor: '#fff',
-                   borderColor: '#D3D3D3'
+                   borderColor: '#D3D3D3',marginTop:1
                }}>
                    <View style={{ flex: 2, padding: 10,top:10 }}>
                        
