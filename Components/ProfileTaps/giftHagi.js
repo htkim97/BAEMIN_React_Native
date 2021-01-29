@@ -3,7 +3,7 @@ import {View, Text ,StyleSheet} from 'react-native';
 
 
 
-export default class giftBox extends Component{
+export default class giftHagi extends Component{
 
     render(){
         return(
